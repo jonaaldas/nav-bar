@@ -1,6 +1,6 @@
 body{
   margin: 0;
-  background-color: navy;
+  /* background-color: navy; */
   box-sizing: content-box;
   -webkit-box-sizing: border-box; 
   -moz-box-sizing: border-box;    
@@ -31,4 +31,110 @@ a{
   outline: 1px solid red;
   padding: 20px;
   border-right: 1px solid grey;
+  text-decoration: none;
+}
+
+.header-cont .logo{
+  float: left;
+  display: block;
+  padding: 10px 20px;
+  border: 2px solid green
+}
+
+.menu a:hover{
+  background-color: #bbb;
+}
+
+.header-cont .menu{
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+.header-cont .menu-icon{
+  border: 1px solid green;
+  padding: 28px 20px;
+  padding: 10px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.header-cont .menu-icon .nav-icon{
+  background: #333;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background .2s ease-out;
+}
+
+.header-cont .menu-icon .nav-icon:before{
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  transition: background .2s ease-out;
+  top:5px;
+}
+
+.header-cont .menu-icon .nav-icon:after{
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  transition: background .2s ease-out;
+  top:-5px;
+}
+
+.header-cont .menu-btn{
+  display: none;
+}
+
+
+.menu-btn{
+  display:none
+}
+
+.header-cont .menu-btn:checked ~ .menu{
+  max-height: 240px;
+}
+
+.header-cont .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.header-cont .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top:0;
+}
+
+.header-cont .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top:0;
+}
+
+@media (min-width: 48em) {
+  .header-cont{
+    height: 100%;
+    display: block;
+  }
+  .header-cont li {
+    float: left;
+  }
+  .header-cont li a {
+    padding: 20px 30px;
+  }
+  .header-cont .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header-cont .menu-icon {
+    display: none;
+  }
 }
