@@ -1,3 +1,66 @@
 body{
   margin: 0;
+  font-family: monospace;
+}
+
+header{
+  display: flex;
+  background-color:rgb(17, 17, 143);
+  flex-wrap: wrap;
+}
+.logo{
+  flex:2;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  margin: 20px;
+}
+.menu-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.nav-icon{
+  width: 20px;
+  height: 2px;
+  display: inline-block;
+  background-color: white;
+  position: relative;
+}
+
+.menu-btn{
+  display: none;
+}
+
+header .menu-icon .nav-icon:before{
+  background-color: white;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 5px;
+}
+
+header .menu-icon .nav-icon:after{
+  background-color: white;
+ content: '';
+ display: block;
+ height: 100%;
+ width: 100%;
+ position: absolute;
+ top: -5px;
+}
+
+.menu{
+  list-style: none;
+  max-width: 0;
+  display: none;
+  color: white
+}
+
+header .menu-btn:checked ~ .menu{
+  max-width: 240px;
+  display: block;
 }
