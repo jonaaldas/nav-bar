@@ -1,0 +1,49 @@
+body{
+  margin: 0;
+  box-sizing: content-box;
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  background-color: white;
+}
+
+header{
+  background-color: orangered;
+}
+
+.logo{
+  background-color: palegreen;
+}
+.nav{
+  /* background-color:red; */
+  border: 10px solid black;
+}
+
+.menu-btn{
+  /* background-color: blue; */
+}
+
+.nav-icon{
+  /* background-color: seagreen; */
+  /* padding: 2px; */
+}
+
+.menu{
+  /* background-color: skyblue; */
+}
+
+
+/* Styles */
+.logo{
+  /* float: left; */
+  /* display: block; */
+}
+
+
+header ul  a{
+  display: block;
+  padding: 20px;
+}
+
+
+
+
