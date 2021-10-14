@@ -60,7 +60,13 @@ header .menu-icon .nav-icon:after{
   list-style: none;
   max-width: 0;
   display: none;
-  color: white
+  color: white;
+  font-size: 1.5em;
+  padding-left: 5px;
+  margin: 10px 10px;
+}
+.menu li{
+  padding: 5px
 }
 
 header .menu-btn:checked ~ .menu{
@@ -117,11 +123,33 @@ header .menu-btn:checked ~ .menu{
 }
 
 @media (min-width: 656px) {
+  /* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
   .main-cont{
     flex-direction: row;
-    /* justify-content: space-between; */
-    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    margin: 50px;
+    /* width: calc(75%); */
+    /* gap: 30px; */
   }
+  .flex-item-1{
+    flex-grow: 1;
+  }
+  .flex-item-2{
+    flex-grow: 1;
+  }
+  .flex-item-3{
+    flex-grow: 1;
+  }
+  .flex-item-4{
+    flex-grow: 1;
+  }
+
 }
 
 
